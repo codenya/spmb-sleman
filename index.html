@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Simulasi Nilai Gabungan SPMB 2026 SMP Negeri di Sleman</title>
+	<link rel="stylesheet" href="sleman.css">
+</head>
+<body>
+
+  <header>
+		<div id="nav-container"></div>
+		<script>
+			fetch('nav.js')
+				.then(res => res.text())
+				.then(data => {
+					document.getElementById('nav-container').innerHTML = data;
+				});
+		</script>
+  </header>
+
+  <h1>Kalkulator Simulasi Hitung Nilai Gabungan - SPMB 2026 SMP Negeri di Kabupaten Sleman</h1>
+  <h2>Untuk Jalur Domisili Wilayah</h2>
+  <h2>dan Jalur Prestasi</h2>
+  <br><br>
+  <p><strong>Petunjuk:</strong> Isi nilai rapor & TKA/D untuk 3 MatPel: IPA/IPAS, Bahasa Indonesia, dan Matematika. Jika ikut Jalur Prestasi Sleman, masukkan juga nilai prestasi dari Disdik Sleman. Jika ikut Jalur Domisili Wilayah, tidak perlu mengisi data nilai prestasi.</p>
+
+  <div id="form"></div>
+  <br><br>
+  <label><b>Tambahan Nilai Prestasi</b></label>
+  <div class="input-group">
+    <input type="range" min="0" max="15" step="0.01" id="prestasi-range">
+    <input type="number" min="0" max="15" step="0.01" id="prestasi" value="0.00">
+  </div>
+  <br><br><br><br><br>
+  <button onclick="handleUserClick(); hitung()">Hitung</button>
+  <button onclick="resetForm()">Kosongkan</button>
+  <div class="result" id="output"></div>
+
+<script src="sleman.js"></script>
+
+  <br><br>
+  <button type="button" class="secondary" onclick="resetForm()">Bersihkan Form</button>
+  <a href="https://wa.me/628112500028?text=Halo%20saya%20mau%20tanya%20soal%20SPMB" target="_blank">
+    <button type="button" class="secondary">Hotline SPMB Sleman via WhatsApp</button>
+  </a>
+  <br><br>
+  Hotline Sleman via email : disdik.pendidikan.sleman@gmail.com
+
+</body>
+</html>
