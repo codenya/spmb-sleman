@@ -134,7 +134,7 @@ input[type="number"]:focus {
 .result {
   margin-top: 2rem;
   padding: 1rem;
-  font-size: 20px;
+  font-size: 13px;
   font-weight: bold;
   border-radius: 10px;
   background: #e9f7ff;
